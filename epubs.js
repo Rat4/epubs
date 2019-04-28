@@ -3,7 +3,7 @@ const epubs=[
     name:'Coleccion completa harry potter',
     author:'JK.Rowlling',
     lang:'español',
-    category:'literatura',
+    category:'popoter',
     id:'1BNYKUAWFpzfNYvNNkgILMtrSI_p3Ys0j',
 	imgId:'',
     description:'coleccion completa de loa saga de harry potter'
@@ -20,10 +20,10 @@ const epubs=[
   {
     name:'Alicia en el pais de las maravillas',
     author:'Lewis Carroll',
-    lang:'español',
+    lang:'inventado',
     category:'literatura',
     id:'1agtbKVRccwGg8Dxg0kH4bnLaE70CjErZ',
 	imgId:'',
     description:'un libro futurista muy chimbita'
-  }
+	}
 ]

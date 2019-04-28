@@ -15,14 +15,26 @@ function cardTemplate(obj){
 	)
 }
 
-
-
-epubs.forEach(function(item){
-	$('main').append(cardTemplate(item))
-})
-
-
-function detailTemplate(obj){
-
-
+function search(query){
+	if (!query) {
+		return epubs
+	}
+	var match=new Array();
+	for(key in query){
+			epubs.forEach((item)=>{
+				if (item[key]==query[key]) {
+					match.push(item)
+				}
+			})
+	}
+	return(match);
+}
+function append(list){
+	$('main').html('');
+	list.forEach(function(item){
+		$('main').append(cardTemplate(item))
+	})
+}
+function display(query){
+	append(search(query));
 }
