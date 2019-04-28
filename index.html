@@ -5,19 +5,31 @@
 		<title>Animation epubs</title>
 
 		<link rel="stylesheet" href="master.css">
+		<link rel="stylesheet" href="fonts.css">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 		<script type="text/javascript" language="javascript" src="epubs.js"></script>
+
 	</head>
 	<body>
 		<header>
-			<div class="info">
+			<div class="info primaryColor">
+				<span class=" icon-079 "></span>
+				<span>Animation Epubs</span>
+			</div>
+
+			<div class="banner">
 
 			</div>
 
-			<ul>
-				<li onclick="display({category:'popoter'})">Drawing</li>
-				<li>Animation</li>
-				<li>Scripting</li>
+			<div class="mobile-menu">
+				<span class=" icon-316 " style="display:none;"></span>
+			</div>
+
+			<ul class="primaryColor">
 				<li onclick="display()">All</li>
+				<li onclick="display({category:'Drawing'})">Drawing</li>
+				<li onclick="display({category:'Animation'})">Animation</li>
+				<li onclick="display({category:'Scripting'})">Scripting</li>
 			</ul>
 		</header>
 

@@ -2,10 +2,10 @@ function cardTemplate(obj){
 	return(`
 		<div class='card' id='${obj.id}'>
 			<img src='https://drive.google.com/uc?export=view&id=${obj.imgId}' alt='${obj.name}-portada'>
-			<h1>${obj.name}</h1>
-			<h3>${obj.author}</h3>
-			<p>${obj.description}</p>
-			<p>Lenguaje:${obj.lang}</p>
+			<p class='name'>${obj.name}</p>
+			<p class='author'>${obj.author}</p>
+
+			<p class='lang'>${obj.lang}</p>
 			<a href='https://drive.google.com/uc?export=export&id=${obj.id}'>
 				<button>Download</button>
 			</a>
@@ -14,7 +14,14 @@ function cardTemplate(obj){
 	`
 	)
 }
-
+function notFoundTemplate(){
+	return(`
+		<div class='errorFound'>
+			<h1>Sorry</h1>
+			<h2>Your epubs was not found</h2>
+		</div>
+		`)
+}
 function search(query){
 	if (!query) {
 		return epubs
@@ -35,6 +42,24 @@ function append(list){
 		$('main').append(cardTemplate(item))
 	})
 }
+function cleanMain(){
+	$('main .card').fadeOut();
+	$(' main .errorFound').remove();
+}
+function dinamicDisplay(list){
+	cleanMain();
+	list.forEach(function(item){
+		$('#'+item.id).fadeIn();
+	})
+
+}
+append(epubs);
 function display(query){
-	append(search(query));
+	//Handle Error
+	if (search(query).length < 1) {
+		cleanMain();
+		$('main').prepend(notFoundTemplate())
+	}else{
+		dinamicDisplay(search(query))//smoot transition on change
+	}
 }

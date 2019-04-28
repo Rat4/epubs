@@ -5,7 +5,7 @@ const epubs=[
     lang:'español',
     category:'popoter',
     id:'1BNYKUAWFpzfNYvNNkgILMtrSI_p3Ys0j',
-	imgId:'',
+	imgId:'1a-abNDAYELqENppSAmI2ssGjBHs3vVUK',
     description:'coleccion completa de loa saga de harry potter'
   },
   {
@@ -14,7 +14,7 @@ const epubs=[
     lang:'español',
     category:'literatura',
     id:'1MKECzAgIdaH5VgyU8AfsxLmsozrwWEL4',
-	imgId:'',
+	imgId:'1a-abNDAYELqENppSAmI2ssGjBHs3vVUK',
     description:'un libro futurista muy chimbita'
   },
   {
@@ -23,7 +23,7 @@ const epubs=[
     lang:'inventado',
     category:'literatura',
     id:'1agtbKVRccwGg8Dxg0kH4bnLaE70CjErZ',
-	imgId:'',
+	imgId:'1a-abNDAYELqENppSAmI2ssGjBHs3vVUK',
     description:'un libro futurista muy chimbita'
 	}
 ]
