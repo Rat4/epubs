@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="esp" dir="ltr">
 	<head>
 		<meta charset="utf-8">
@@ -21,14 +20,9 @@
 		</footer>
 		<script src="jquery.min.js" charset="utf-8"></script>
 		<script src="includes.js" charset="utf-8"></script>
-		<script type="text/javascript">
-		if (!getAllUrlParams().category) {
-			display({category:'All'},cardTemplate)
-		}else{
-			display({category:getAllUrlParams().category},cardTemplate)
 
-		}
-
+		<script type="text/javascript" language="javascript" >
+			display({id:getAllUrlParams().id},cardTemplate)
 		</script>
-	</body>
+
 </html>

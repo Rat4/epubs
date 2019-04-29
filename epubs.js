@@ -25,5 +25,5 @@ const epubs=[
     id:'1agtbKVRccwGg8Dxg0kH4bnLaE70CjErZ',
 	imgId:'1a-abNDAYELqENppSAmI2ssGjBHs3vVUK',
     description:'un libro futurista muy chimbita'
-	}
+}
 ]
