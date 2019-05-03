@@ -1,0 +1,63 @@
+/* HEADER --------------------------------------*/
+nav{
+	text-align: center;
+	font-size: 1.2em;
+}
+nav ul{
+	display: inline-block;
+	padding: 0;
+	padding-bottom: 10px;
+	border-bottom: #fe4a49 solid 4px;
+}
+nav a{
+	color:#fe4a49;
+}
+
+nav a:hover{
+	color:#ffd859;
+	background: #fe4a49;
+}
+
+main{
+	padding-top:0;
+}
+/* CONTENT------------------------------------------ */
+.wraper{
+	margin-top:30px;
+}
+.card{
+	position: relative;
+	/* min-width: 250px; */
+	text-align: center;
+	padding:20px;
+	margin:10px;
+	box-shadow: #434e5b 0 0 10px;
+	height: 400px;
+	border-radius: 10px;
+}
+.card img{
+	width: 100%;
+}
+
+/* Hover */
+
+.hover{
+	position: absolute;
+	top:0;
+	right:0;
+	bottom: 0;
+	left:0;
+	opacity: 0;
+
+	background: rgba(67,78,91,0.9);
+	color:white;
+	text-align: center;
+	padding:10px;
+	padding-top:30%;
+	transition: all 0.25s ease-in;
+}
+
+.card:hover .hover{
+	opacity: 1;
+
+}

@@ -1,10 +1,30 @@
 @font-face {
+	font-family: 'ubuntu-r';
+	src: url('../fonts/Ubuntu-R.ttf');
+}
+@font-face {
+	font-family: 'ubuntu-ri';
+	src: url('../fonts/Ubuntu-RI.ttf');
+}
+@font-face {
+	font-family: 'ubuntu-b';
+	src: url('../fonts/Ubuntu-B.ttf');
+}
+@font-face {
+	font-family: 'ubuntu-l';
+	src: url('../fonts/Ubuntu-L.ttf');
+}
+@font-face {
+	font-family: 'ubuntu-li';
+	src: url('../fonts/Ubuntu-LI.ttf');
+}
+@font-face {
 	font-family: 'captainicon';
-	src:url('fonts/captainicon.eot?-1i2a56');
-	src:url('fonts/captainicon.eot?#iefix-1i2a56') format('embedded-opentype'),
-		url('fonts/captainicon.woff?-1i2a56') format('woff'),
-		url('fonts/captainicon.ttf?-1i2a56') format('truetype'),
-		url('fonts/captainicon.svg?-1i2a56#captainicon') format('svg');
+	src:url('../fonts/captainicon.eot?-1i2a56');
+	src:url('../fonts/captainicon.eot?#iefix-1i2a56') format('embedded-opentype'),
+		url('../fonts/captainicon.woff?-1i2a56') format('woff'),
+		url('../fonts/captainicon.ttf?-1i2a56') format('truetype'),
+		url('../fonts/captainicon.svg?-1i2a56#captainicon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
