@@ -40,6 +40,33 @@ function dl_btn(id){
 		</a>
 		`)
 }
+
+function detailTemplate(obj){
+	return(`
+		<div class='detail row'>
+			<div class='col-xs-6 portada'>
+				<p>Category: ${obj.category}</p>
+				<img src='https://drive.google.com/uc?export=view&id=${obj.imgId}' alt='${obj.title}-portada'>
+				${dl_btn(obj.id)}
+			</div>
+
+			<div class='col-xs-6'>
+				<h1>${obj.title}</h1>
+				<p class='meta'>
+					<em>Author:${obj.author}</em>
+					<br/>
+					<em>Lang: ${obj.lang}</em>
+				</p>
+				<h3>Description</h3>
+				<p class='description'>${obj.description}</p>
+				<button>View All</button>
+			</div>
+
+		</div>
+	`)
+
+}
+
 function notFoundTemplate(){
 	return(`
 		<div class='errorFound'>

@@ -12,7 +12,7 @@ const epubs=[
 	    title:'Ready player one',
 	    author:'Ernest Cline',
 	    lang:'español',
-	    category:'literatura',
+	    category:'Literatura',
 	    id:'1MKECzAgIdaH5VgyU8AfsxLmsozrwWEL4',
 		imgId:'1a-abNDAYELqENppSAmI2ssGjBHs3vVUK',
 	    description:'un libro futurista muy chimbita'
@@ -21,7 +21,7 @@ const epubs=[
 	    title:'Alicia en el pais de las maravillas',
 	    author:'Lewis Carroll',
 	    lang:'inventado',
-	    category:'literatura',
+	    category:'Literatura',
 	    id:'1agtbKVRccwGg8Dxg0kH4bnLaE70CjErZ',
 		imgId:'1a-abNDAYELqENppSAmI2ssGjBHs3vVUK',
 	   	description:'un libro futurista muy chimbita'
@@ -30,8 +30,8 @@ const epubs=[
 	  	title:'Alicia en el pais de las maravillas',
 	  	author:'Lewis Carroll',
 	  	lang:'inventado',
-	  	category:'literatura',
-	  	id:'1agtbKVRccwGg8Dxg0kH4bnLaE70CjErZ',
+	  	category:'Literatura',
+	  	id:'1agtbKVRccwGg8Dxg0kH4bnLaE70CjErhZ',
 	  	imgId:'1a-abNDAYELqENppSAmI2ssGjBHs3vVUK',
 	  	description:'un libro futurista muy chimbita'
 	},
@@ -39,8 +39,8 @@ const epubs=[
 	  	title:'Alicia en el pais de las maravillas',
 	  	author:'Lewis Carroll',
 	  	lang:'inventado',
-	  	category:'literatura',
-	  	id:'1agtbKVRccwGg8Dxg0kH4bnLaE70CjErZ',
+	  	category:'Literatura',
+	  	id:'1agtbKVRccwGg8Dxg0kH4bnhLaE70CjErZ',
 	  	imgId:'1a-abNDAYELqENppSAmI2ssGjBHs3vVUK',
 	  	description:'un libro futurista muy chimbita'
 	},
@@ -48,8 +48,8 @@ const epubs=[
 	  	title:'Alicia en el pais de las maravillas',
 	  	author:'Lewis Carroll',
 	  	lang:'inventado',
-	  	category:'literatura',
-	  	id:'1agtbKVRccwGg8Dxg0kH4bnLaE70CjErZ',
+	  	category:'Literatura',
+	  	id:'1agtbKVRccwGg8Dxg0kHh4bnLaE70CjErZ',
 	  	imgId:'1a-abNDAYELqENppSAmI2ssGjBHs3vVUK',
 	  	description:'un libro futurista muy chimbita'
 	}

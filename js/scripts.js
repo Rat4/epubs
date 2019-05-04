@@ -19,6 +19,6 @@ function searchArr(query){
 // display a array of items on .content container with a specified template
 function displayList(list,template){
 	list.forEach((item)=>{
-		$('.content').append(template(item))
+		$('main').append(template(item))
 	})
 }

@@ -7,20 +7,23 @@ nav ul{
 	display: inline-block;
 	padding: 0;
 	padding-bottom: 10px;
-	border-bottom: #fe4a49 solid 4px;
+	border-bottom: var(--primaryColor) solid 4px;
 }
 nav a{
-	color:#fe4a49;
+	color:var(--primaryColor);
 }
 
 nav a:hover{
-	color:#ffd859;
-	background: #fe4a49;
+	color:var(--lightColor);
+	background: var(--primaryColor);
 }
-
 main{
 	padding-top:0;
 }
+main.row{
+	margin:0 auto;
+}
+
 /* CONTENT------------------------------------------ */
 .wraper{
 	margin-top:30px;
@@ -31,7 +34,7 @@ main{
 	text-align: center;
 	padding:20px;
 	margin:10px;
-	box-shadow: #434e5b 0 0 10px;
+	box-shadow: var(--DarkColor) 0 0 10px;
 	height: 400px;
 	border-radius: 10px;
 }
@@ -60,4 +63,32 @@ main{
 .card:hover .hover{
 	opacity: 1;
 
+}
+
+/* PAGINATION */
+.pagination{
+	text-align: center;
+}
+.pagination ul{
+	list-style-type: none;
+	padding:0;
+}
+
+.pagination ul li{
+	cursor:pointer;
+	font-family: ubuntu-b;
+	display:inline-block;
+	padding:2px 7px;
+	box-shadow: var(--DarkColor) 0 0 4px;
+	margin:0 5px;
+	border-radius: 3px;
+
+}
+.pagination .current{
+	background:var(--lightColor);
+	margin-bottom: 40px;
+}
+
+.pagination .current a{
+	color:var(--primaryColor);
 }
