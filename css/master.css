@@ -11,6 +11,9 @@ body{
 	color: var(--DarkColor);
 	overflow-x: hidden;
 }
+main{
+	min-height: 71vh;
+}
 header ul{
 	list-style-type: none;
 }
@@ -34,7 +37,7 @@ a{
 	font-family: ubuntu-r;
 }
 .f-italic{
-font-family: ubuntu-i;
+font-family: ubuntu-ri;
 }
 .f-light{
 font-family: ubuntu-l;
@@ -83,4 +86,56 @@ main{
 	margin:auto;
 	padding: 50px;
 
+}
+
+/* DOWNLOAD BUTTON */
+.dl-btn{
+	width:140px;
+    margin: 30px 0 0 14%;
+	display:inline-block;
+	background:var(--primaryColor);
+	color:white;
+	padding:15px;
+	border-radius:10px;
+	text-transform: uppercase;
+	transition: all 0.1s ease-in;
+
+}
+
+.dl-btn .icon-236{
+	padding-left:15px;
+}
+
+.dl-btn:hover{
+	background: var(--DarkColor);
+	color:var(--lightColor);
+}
+
+/* PAGINATION */
+/* PAGINATION */
+#pagination{
+	text-align: center;
+}
+#pagination ul{
+	list-style-type: none;
+	padding:0;
+}
+
+#pagination ul li{
+	cursor:pointer;
+	font-family: ubuntu-b;
+	display:inline-block;
+	padding:2px 7px;
+	box-shadow: var(--DarkColor) 0 0 4px;
+	margin:0 5px;
+	border-radius: 3px;
+
+}
+#pagination .current{
+	background:var(--lightColor);
+	margin-bottom: 40px;
+}
+
+#pagination .current a{
+	color:var(--primaryColor);
 }

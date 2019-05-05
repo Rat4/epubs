@@ -35,31 +35,34 @@ function cardTemplate(obj){
 
 function dl_btn(id){
 	return(`
-		<a href='https://drive.google.com/uc?export=export&id=${id}'>
-			<button>Download</button>
-		</a>
-		`)
+
+			<a href='https://drive.google.com/uc?export=export&id=${id} ' class='dl-btn f-bold'>
+				Download <span class='icon-236'></span>
+			</a>
+
+	`)
 }
 
 function detailTemplate(obj){
 	return(`
 		<div class='detail row'>
 			<div class='col-xs-6 portada'>
-				<p>Category: ${obj.category}</p>
+				<span class='category'>Category: ${obj.category}</span>
 				<img src='https://drive.google.com/uc?export=view&id=${obj.imgId}' alt='${obj.title}-portada'>
 				${dl_btn(obj.id)}
 			</div>
 
-			<div class='col-xs-6'>
+			<div class='col-xs-6 info'>
 				<h1>${obj.title}</h1>
+
 				<p class='meta'>
-					<em>Author:${obj.author}</em>
+					<span class='f-ligth-i'>Author: ${obj.author}</span>
 					<br/>
-					<em>Lang: ${obj.lang}</em>
+					<span class='f-ligth-i'>Lang: ${obj.lang}</span>
 				</p>
 				<h3>Description</h3>
 				<p class='description'>${obj.description}</p>
-				<button>View All</button>
+
 			</div>
 
 		</div>
@@ -67,6 +70,18 @@ function detailTemplate(obj){
 
 }
 
+function searchboxTemplate(){
+	return(`
+		<select class="filterfield" name="filter">
+			<option value="Category">filter</option>
+			<option value="Category">Category</option>
+			<option value="Title">Title</option>
+			<option value="Author">Author</option>
+		</select>
+		<input class='searchfield' type="text" name="search" placeholder='Search' value="">
+		<a href="#">Submit</a>
+	`)
+}
 function notFoundTemplate(){
 	return(`
 		<div class='errorFound'>

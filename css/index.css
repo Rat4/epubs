@@ -64,31 +64,3 @@ main.row{
 	opacity: 1;
 
 }
-
-/* PAGINATION */
-.pagination{
-	text-align: center;
-}
-.pagination ul{
-	list-style-type: none;
-	padding:0;
-}
-
-.pagination ul li{
-	cursor:pointer;
-	font-family: ubuntu-b;
-	display:inline-block;
-	padding:2px 7px;
-	box-shadow: var(--DarkColor) 0 0 4px;
-	margin:0 5px;
-	border-radius: 3px;
-
-}
-.pagination .current{
-	background:var(--lightColor);
-	margin-bottom: 40px;
-}
-
-.pagination .current a{
-	color:var(--primaryColor);
-}

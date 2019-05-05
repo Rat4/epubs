@@ -1,0 +1,33 @@
+main{
+	min-height: 78vh;
+}
+.portada{
+
+}
+
+.portada .category{
+	padding:10px;
+	border-radius: 10px 10px 0 0;
+	box-shadow: var(--DarkColor) 0 0 10px;
+}
+
+.portada img{
+	min-width:10.5em;
+	width:60%;
+	display:block;
+	margin-top: 5px;
+}
+
+/* INFO */
+.meta span{
+	display: inline-block;
+	margin-bottom: 10px;
+}
+ul{
+	margin:0px;
+	padding:0;
+}
+nav a:hover{
+	color:var(--lightColor);
+	background: var(--primaryColor);
+}
