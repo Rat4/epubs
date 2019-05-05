@@ -7,7 +7,8 @@ function searchArr(query){
 	var match=new Array();
 	for(key in query){
 			epubs.forEach((item)=>{
-				if (item[key]==query[key] || query[key] == 'All') {
+				var pat=new RegExp('.*'+query[key].toLowerCase()+'.*','g');
+				if (item[key].toLowerCase().match(pat) || query[key] == 'All') {
 
 					match.push(item)
 				}
@@ -19,12 +20,17 @@ function searchArr(query){
 // display a array of items on .content container with a specified template
 function displayList(list,template){
 	list.forEach((item)=>{
-		$('main').append(template(item))
+		if (item) {
+			$('main').append(template(item))
+		}
 	})
 }
+
+
 function clean(container){
 	$(container).html('');
 }
+
 function isObjEmpty(obj) {
     for(var key in obj) {
         if(obj.hasOwnProperty(key))
@@ -47,7 +53,10 @@ class Pagination {
 
 	init(renderFunction,onChange){
 		renderFunction(this.getList(1))
-		$('#pagination ul li')[0].className='current';
+		if (this.pages>1) {
+			$('#pagination ul li')[0].className='current';
+		}
+
 
 		$('#pagination ul li').on('click',(e)=>{
 			$('#pagination ul li').removeClass('current');
@@ -64,12 +73,15 @@ class Pagination {
 
 	getHtml(){
 		var html='<ul>';
-		for (var i = 0; i < this.pages; i++) {
-			html+=`<li> <a href="#"> ${i+1} </a> </li>`
+		if (this.pages > 1) {
+			for (var i = 0; i < this.pages; i++) {
+				html+=`<li> <a href="#"> ${i+1} </a> </li>`
+			}
+
+			html+='</ul>';
+			return html;
 		}
 
-		html+='</ul>';
-		return html;
 	}
 
 	getList(page){
@@ -80,4 +92,45 @@ class Pagination {
 		}
 		return pageList;
 	}
+}
+
+class Search {
+	constructor(inputs) {
+		this.container='.site';
+		this.submit='.site #search-submit';
+		this.inputs=inputs
+
+		this.handleSubmit();
+	}
+
+	handleSubmit(){
+		$(this.submit).on('click',(e)=>{
+			this.getValues(this.inputs);
+			this.href(this.params);
+
+		})
+	}
+
+	getValues(inputs){
+		this.params={};
+		inputs.forEach((input)=>{
+
+			this.params[input.name]=$(this.container +' '+ input.tag +'[name='+ input.name +']').val()
+		})
+	}
+
+
+	href(params){
+		var href='?'
+
+		if(params.search==""){
+			params.search='All'
+		}
+
+		for(var key in params){
+			href+=`${key}=${params[key]}&`
+		}
+		window.location.href=href.slice(0,-1)
+	}
+
 }

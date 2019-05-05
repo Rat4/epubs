@@ -14,20 +14,32 @@ else{
 
 	}
 	else{//si s buscado desde la barra buscadora
-		var filter=params.filter;
-		var list=searchArr({ filter : params.search})
-
+		var query={};
+		query[params.filter]=params.search;
+		var list=searchArr(query)
 	}
 }
 
-// render de cartillas gestionado por paginacion
-var pagination=new Pagination(3,list);
+if (list.length < 1) {
+// handle error.. not found
+	$('main').html(notFoundTemplate())
+}else{
+	// solo renderizar si se encontro algo
+	// render de cartillas gestionado por paginacion
+	var pagination=new Pagination(8,list);
 
-pagination.init(
-	(list)=>{
-		displayList(list,cardTemplate)
-	}
-	,()=>{
-		clean('main')
-	}
-);
+	pagination.init(
+		(list)=>{
+			displayList(list,cardTemplate)
+		}
+		,()=>{
+			clean('main')
+		}
+	);
+}
+
+// search form
+
+$('header .site').append(searchboxTemplate())
+
+new Search([{name:'filter',tag:'select'},{name:'search',tag:'input'}])

@@ -73,13 +73,12 @@ function detailTemplate(obj){
 function searchboxTemplate(){
 	return(`
 		<select class="filterfield" name="filter">
-			<option value="Category">filter</option>
-			<option value="Category">Category</option>
-			<option value="Title">Title</option>
-			<option value="Author">Author</option>
+			<option value="category">Category</option>
+			<option value="title">Title</option>
+			<option value="author">Author</option>
 		</select>
 		<input class='searchfield' type="text" name="search" placeholder='Search' value="">
-		<a href="#">Submit</a>
+		<span id='search-submit'>Submit</span>
 	`)
 }
 function notFoundTemplate(){
