@@ -7,7 +7,7 @@ function searchArr(query){
 	var match=new Array();
 	for(key in query){
 			epubs.forEach((item)=>{
-				var pat=new RegExp('.*'+query[key].toLowerCase()+'.*','g');
+				var pat=new RegExp('.*'+query[key].toLowerCase().replace('+',' ')+'.*','g');
 				if (item[key].toLowerCase().match(pat) || query[key] == 'All') {
 
 					match.push(item)
@@ -115,7 +115,7 @@ class Search {
 		this.params={};
 		inputs.forEach((input)=>{
 
-			this.params[input.name]=$(this.container +' '+ input.tag +'[name='+ input.name +']').val()
+			this.params[input.name]=$(this.container +' '+ input.tag +'[name='+ input.name +']').val().replace(' ','+')
 		})
 	}
 
