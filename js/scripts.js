@@ -1,4 +1,5 @@
 const root='epubs';
+$('.tohome').attr('href','/'+root);
 // search a epub object with a query
 function searchArr(query){
 	if (!query ) {
