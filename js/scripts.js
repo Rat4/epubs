@@ -1,4 +1,4 @@
-const root='animationepubs';
+const root='epubs';
 // search a epub object with a query
 function searchArr(query){
 	if (!query ) {
