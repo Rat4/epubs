@@ -26,7 +26,7 @@ if (list.length < 1) {
 }else{
 	// solo renderizar si se encontro algo
 	// render de cartillas gestionado por paginacion
-	var pagination=new Pagination(8,list);
+	var pagination=new Pagination(3,list);
 
 	pagination.init(
 		(list)=>{
